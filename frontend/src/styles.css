@@ -1,0 +1,67 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #202a35;
+  font: 15px/1.5 system-ui, sans-serif;
+}
+
+.container { width: min(1100px, calc(100% - 32px)); margin-inline: auto; }
+.site-header { padding: 16px 0; border-bottom: 1px solid #e0e5eb; }
+.muted { color: #556271; }
+main { padding: 20px 0 40px; }
+
+nav, .actions { display: flex; flex-wrap: wrap; gap: 6px; }
+nav { margin-bottom: 20px; }
+nav [aria-pressed="true"] { background: #eef4ff; border-color: #b8cef1; color: #204c90; }
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+h1, h2, p { margin: 0; }
+h1 { font-size: 1.65rem; }
+h2 { font-size: 1.1rem; }
+
+button, input, select { font: inherit; }
+button, input, select {
+  padding: 6px 10px;
+  border: 1px solid #cbd3dc;
+  border-radius: 5px;
+  background: #fff;
+  color: inherit;
+}
+button { cursor: pointer; }
+button:hover:not(:disabled) { background: #f1f5f9; }
+button:disabled { opacity: .55; cursor: default; }
+button.primary { background: #2859a3; border-color: #2859a3; color: #fff; }
+button.primary:hover:not(:disabled) { background: #204986; }
+.danger { color: #a12430; }
+:focus-visible { outline: 2px solid #2859a3; outline-offset: 2px; }
+
+.record-form, .table-scroll, .empty {
+  border: 1px solid #e0e5eb;
+  border-radius: 6px;
+}
+.record-form { padding: 16px; margin-bottom: 16px; }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(215px, 100%), 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+input, select { display: block; width: 100%; margin-top: 4px; }
+
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 8px 10px; text-align: left; white-space: nowrap; }
+th { background: #f6f8fa; }
+tbody td { border-top: 1px solid #e0e5eb; }
+td .actions { flex-wrap: nowrap; }
+.empty { padding: 18px; color: #556271; }
+.notice { margin-bottom: 12px; padding: 10px; background: #fff1f2; color: #842331; }
+.notice button { margin-top: 8px; }
